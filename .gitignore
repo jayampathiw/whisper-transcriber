@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Environment
+.env
+.env.local
+
+# Output directories
+output/
+chunks/
+test-audio/
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.webm
+
+# Transcription outputs
+*.json
+*.txt
+*.srt
+*.vtt
+*.tsv
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
