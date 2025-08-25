@@ -58,12 +58,16 @@ export class WhisperTranscriber {
       'whisper',
       `"${audioPath}"`,
       `--model ${this.modelSize}`,
-      `--language ${this.language}`,
       `--output_format ${outputFormat}`,
       `--output_dir "${outputDir}"`,
       `--task ${task}`,
       `--device ${this.device}`
     ];
+
+    // Only add language parameter if it's not 'auto' (let Whisper auto-detect when 'auto')
+    if (this.language && this.language !== 'auto') {
+      commandArgs.splice(3, 0, `--language ${this.language}`);
+    }
 
     if (!timestamps) commandArgs.push('--no_timestamps');
     if (wordTimestamps) commandArgs.push('--word_timestamps True');

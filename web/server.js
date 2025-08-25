@@ -51,7 +51,7 @@ const upload = multer({
 // Initialize Whisper transcriber
 const transcriber = new WhisperTranscriber({
   modelSize: 'base',
-  language: 'auto',
+  language: 'auto', // Will auto-detect language
   verbose: true
 });
 
